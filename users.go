@@ -8,7 +8,7 @@ type Users struct {
 	Password  string                `gorm:"column:password;type:varchar(60);not null"`
 	CreatedAt int64                 `gorm:"column:created_at;autoCreateTime"`
 	UpdatedAt int64                 `gorm:"column:updated_at;autoUpdateTime"`
-	DeletedAt soft_delete.DeletedAt `gorm:"column:deleted_at;default:null;index:idx_deleted_at"`
+	DeletedAt soft_delete.DeletedAt `gorm:"column:deleted_at;default:null"`
 }
 
 func (Users) TableName() string {

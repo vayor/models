@@ -7,7 +7,7 @@ type Audit struct {
 	Message   string                `gorm:"column:message;type:text)"`
 	CreatedAt int64                 `gorm:"column:created_at;autoCreateTime"`
 	UpdatedAt int64                 `gorm:"column:updated_at;autoUpdateTime"`
-	DeletedAt soft_delete.DeletedAt `gorm:"column:deleted_at;default:null;index:idx_deleted_at"`
+	DeletedAt soft_delete.DeletedAt `gorm:"column:deleted_at;default:null"`
 }
 
 func (Audit) TableName() string {
