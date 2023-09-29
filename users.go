@@ -4,8 +4,6 @@ import "gorm.io/plugin/soft_delete"
 
 type Users struct {
 	ID        uint64                `gorm:"column:id;primaryKey"`
-	FirstName string                `gorm:"column:name_first;default:null"`
-	LastName  string                `gorm:"column:name_last;default:null"`
 	Email     string                `gorm:"column:email;index:idx_email,unique;not null"`
 	Password  string                `gorm:"column:password;not null"`
 	JWTSecret string                `gorm:"column:jwt_secret;not null"`
