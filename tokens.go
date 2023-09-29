@@ -4,6 +4,7 @@ import "gorm.io/plugin/soft_delete"
 
 type Tokens struct {
 	ID        uint64                `gorm:"column:id;primaryKey"`
+	UserID    uint64                `gorm:"column:user_id"`
 	Secret    string                `gorm:"column:secret"`
 	CreatedAt int64                 `gorm:"column:created_at;autoCreateTime"`
 	UpdatedAt int64                 `gorm:"column:updated_at;autoUpdateTime"`
