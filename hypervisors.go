@@ -7,6 +7,7 @@ type Hypervisors struct {
 	Host      string                `gorm:"column:host;type:varchar(250);not null"`
 	Port      uint16                `gorm:"column:port;not null"`
 	Secret    string                `gorm:"column:secret;type:varchar(128);not null"`
+	Region    string                `gorm:"column:region;type:enum('ap-sg-1');default:null"`
 	CreatedAt int64                 `gorm:"column:created_at;autoCreateTime"`
 	UpdatedAt int64                 `gorm:"column:updated_at;autoUpdateTime"`
 	DeletedAt soft_delete.DeletedAt `gorm:"column:deleted_at;default:null;index:idx_deleted_at"`
