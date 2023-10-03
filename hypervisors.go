@@ -17,7 +17,3 @@ type Hypervisors struct {
 func (Hypervisors) TableName() string {
 	return "hypervisors"
 }
-
-func (Hypervisors) Pick(capability string) string {
-	return "test"
-}
