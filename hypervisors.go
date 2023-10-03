@@ -10,8 +10,14 @@ type Hypervisors struct {
 	CreatedAt int64                 `gorm:"column:created_at;autoCreateTime"`
 	UpdatedAt int64                 `gorm:"column:updated_at;autoUpdateTime"`
 	DeletedAt soft_delete.DeletedAt `gorm:"column:deleted_at;default:null;index:idx_deleted_at"`
+
+	Capabilities []HypervisorCapabilities `gorm:"references:ID;foreignKey:HypervisorID"`
 }
 
 func (Hypervisors) TableName() string {
 	return "hypervisors"
+}
+
+func (Hypervisors) Pick(capability string) string {
+	return "test"
 }
