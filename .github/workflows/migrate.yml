@@ -18,4 +18,4 @@ jobs:
       - name: migrate
         run: |
           go version
-          go run utils/migrate.go
+          go run utils/migrate.go "first_arg"

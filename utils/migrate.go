@@ -7,6 +7,6 @@ import (
 
 func main() {
 
-	fmt.Println(os.Getenv("PROD_DB_PASSWORD"))
+	fmt.Println(os.Args[1])
 
 }
