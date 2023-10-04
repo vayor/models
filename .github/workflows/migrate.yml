@@ -18,5 +18,4 @@ jobs:
       - name: migrate
         run: |
           go version
-          DB_PASSWORD=${{ secrets.DB_PASSWORD }}
-          go run utils/migrate.go
+          DB_PASSWORD=${{ secrets.DB_PASSWORD }} go run utils/migrate.go
