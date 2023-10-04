@@ -19,5 +19,5 @@ jobs:
         run: |
           go version
           go run utils/migrate.go
-        with:
+        env:
           DB_PASSWORD: ${{ env.DB_PASSWORD }}
