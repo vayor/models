@@ -16,6 +16,6 @@ jobs:
           go-version: "1.21.0"
 
       - name: migrate
-        run:
+        run: |
           go version
           ls -all
