@@ -7,6 +7,6 @@ import (
 
 func main() {
 
-	fmt.Println(os.Args[1])
+	fmt.Println(os.Getenv("DB_PASSWORD"))
 
 }
