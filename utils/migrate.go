@@ -2,11 +2,11 @@ package main
 
 import (
 	"os"
-	"fmt"
+	"log"
 )
 
 func main() {
 
-	fmt.Println(os.Getenv("DB_PASSWORD"))
+	log.Println(os.Getenv("DB_PASSWORD"))
 
 }
