@@ -1,0 +1,15 @@
+name: migrate
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: migrate
+        run:
+          go run utils/migrate.go
